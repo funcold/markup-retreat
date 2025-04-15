@@ -1,1 +1,31 @@
-/* Пиши стили тут */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+  }
+  
+  .stars {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  
+  .star img {
+    width: 25px;
+    cursor: pointer;
+  }
+  
+  .stars input {
+    display: none;
+  }
+  
+  .stars label {
+    display: inline-block;
+  }
+  
+  .stars input:checked ~ label img,
+  .stars label:hover img,
+  .stars label:hover ~ label img {
+    content: url(./img/star.svg);
+  }
